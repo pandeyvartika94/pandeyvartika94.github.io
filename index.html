@@ -14,6 +14,9 @@
     <nav>
         <div class="container nav-content">
             <div class="logo">Vartika</div>
+            <div class="hamburger">
+    <i class="fas fa-bars"></i>
+</div>
             <ul class="nav-links">
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -166,6 +169,19 @@
             <p style="margin-top:25px;">&copy; 2026 Vartika Pandey • Senior WordPress Developer</p>
         </div>
     </footer>
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+</script>
 </body>
 </html>
